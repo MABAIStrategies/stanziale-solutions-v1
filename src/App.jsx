@@ -1,3 +1,4 @@
+import { GEMINI_API_KEY } from './config.js';
 import React, { useState, useEffect } from 'react';
 import { 
   Menu, 
@@ -580,7 +581,7 @@ function AITools({ navigateTo }) {
   const [error, setError] = useState('');
 
   const callGeminiAPI = async (promptText) => {
-    const apiKey = ""; 
+    const apiKey = GEMINI_API_KEY; 
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
 
     const payload = {
